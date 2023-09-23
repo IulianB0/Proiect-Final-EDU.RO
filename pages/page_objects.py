@@ -39,6 +39,7 @@ class PageObjects():
     language_google_bulgara_xpath_button = "//*[@id=':2.menuBody']/table/tbody/tr/td[3]/a[6]/div/span[2]"
     language_google_close_xpath_button = "//a[@id=':1.close']/img"
     search_xpath_button = "//*[@id='edit-submit']"
+    search_error_xpath = "//*[@id='main']/div[2]/div/div[1]/h2"
 # text
     header_contact_text = "Date de contact"
     header_invatamant_primar_text = "Învățământ primar"
@@ -52,11 +53,13 @@ class PageObjects():
     search_invatamant_text = "Învățământ primar"
     search_valid_class_text = "   "
     search_invalid_class_text = "///"
+    search_cautare_text = "Căutare"
 # location text
     language_comunicate_xpath_text = "//*[@id='block-views-comunicate-de-presa-block-1']/h2"
     search_result_xpath_text = "//*[@id='content']/div/ol/li[1]/h3/a"
 # forms
     language_xpath_form = "//span[@id='select2-c14v-container']/div"
     search_menu_xpath_form = "//input[@id='edit-search-block-form--2']"
+    search_bar_xpath_form = "//input[@id='edit-key']"
 # messages
     search_error_message = "Vă rugăm să introduceți câteva cuvinte cheie."

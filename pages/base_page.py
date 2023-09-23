@@ -1,6 +1,6 @@
 import time
 
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 
 from utils.webdriver import WebDriver
@@ -13,14 +13,6 @@ class BasePage(WebDriver):
 
     def click(self, xpath_button):
         self.driver.find_element(By.XPATH, xpath_button).click()
-        self.driver.implicitly_wait(1)
-
-    # def click_id(self, id_button):
-    #     self.driver.find_element(By.ID, id_button).click()
-    #     self.driver.implicitly_wait(1)
-
-    def fill_text(self, text, text_xpath):
-        self.driver.find_element(By.XPATH, text_xpath).send_keys(text)
         self.driver.implicitly_wait(1)
 
     def click_multiple_times(self, nr, xpath_button):
@@ -74,4 +66,17 @@ class BasePage(WebDriver):
     def assert_text(self, xpath_text, expected_text):
         xpath = self.driver.find_element(By.XPATH, xpath_text)
         actual_text = xpath.text
-        assert actual_text == expected_text, , f"Current text '{actual_text}' does not match expected text '{expected_text}"
+        assert actual_text == expected_text, f"Current text '{actual_text}' does not match expected text '{expected_text}"
+
+    def fill_text(self, text, text_xpath):
+        self.driver.find_element(By.XPATH, text_xpath).send_keys(text)
+        self.driver.implicitly_wait(1)
+
+    def press_enter(self, xpath):
+        adress = self.driver.find_element(By.XPATH, xpath)
+        adress.send_keys(Keys.ENTER)
+
+    def clear_text(self, xpath):
+        elements = self.driver.find_elements(By.XPATH, xpath)
+        for element in elements:
+            self.driver.execute_script("arguments[0].value = '';", element)

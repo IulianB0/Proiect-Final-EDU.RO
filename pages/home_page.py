@@ -137,3 +137,66 @@ class HomePage(BasePage, PageObjects):
 
     def cooperare_validation(self):
         self.assert_text(PageObjects.header_studiaza_xpath_text,PageObjects.header_studiaza_text)
+
+    def language(self):
+        self.click(PageObjects.language_xpath_button)
+
+    def language_english(self):
+        self.click(PageObjects.language_english_xpath_button)
+
+    def language_english_validation(self):
+        self.assert_text(PageObjects.language_google_xpath_button, PageObjects.language_google_engleza_text)
+
+    def language_google(self):
+        self.click(PageObjects.language_google_xpath_button)
+
+    def language_bulgara(self):
+        self.click(PageObjects.language_google_bulgara_xpath_button)
+
+    def language_bulgara_validation(self):
+        self.assert_text(PageObjects.language_google_xpath_button, PageObjects.language_google_bulgara_text)
+
+    def language_close(self):
+        self.click(PageObjects.language_google_close_xpath_button)
+
+    def language_validation(self):
+        self.assert_text(PageObjects.language_comunicate_xpath_text, PageObjects.language_comunicate_text)
+
+    def search_studii(self):
+        self.fill_text(PageObjects.search_studii_text, PageObjects.search_menu_xpath_form)
+
+    def press_enter_key(self):
+        self.press_enter(PageObjects.search_menu_xpath_form)
+
+    def first_result_studii(self):
+        self.assert_text(PageObjects.search_result_xpath_text, PageObjects.search_studii_text)
+
+    def clear_form(self):
+        self.clear_text(PageObjects.search_bar_xpath_form)
+
+    def search_invatamant(self):
+        self.fill_text(PageObjects.search_invatamant_text, PageObjects.search_bar_xpath_form)
+
+    def search(self):
+        self.click(PageObjects.search_xpath_button)
+
+    def first_result_invatamant(self):
+        self.assert_text(PageObjects.search_result_xpath_text, PageObjects.search_invatamant_text)
+
+    def search_valid(self):
+        self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_menu_xpath_form)
+
+    def search_validation(self):
+        self.assert_text(PageObjects.search_xpath_button, PageObjects.search_cautare_text)
+
+    def search_valid_bar(self):
+        self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_bar_xpath_form)
+
+    def search_error(self):
+        self.assert_text(PageObjects.search_error_message, PageObjects.search_error_xpath)
+
+    def search_invalid(self):
+        self.fill_text(PageObjects.search_invalid_class_text, PageObjects.search_menu_xpath_form)
+
+    def search_invalid_bar(self):
+        self.fill_text(PageObjects.search_invalid_class_text, PageObjects.search_bar_xpath_form)
