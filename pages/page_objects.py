@@ -1,6 +1,7 @@
 class PageObjects():
 # links
     home_url = "https://edu.ro/"
+    contact_url = "https://edu.ro/contact"
     instagram_url = "https://www.instagram.com/edu.gov.ro/"
     facebook_url = "https://www.facebook.com/www.edu.ro/"
     organigrama_url = "https://www.edu.ro/organigrama"
@@ -12,10 +13,10 @@ class PageObjects():
     accessibility_normal_size_xpath_button = "//div[@id='block-textsize-form']/ul/li[3]/a/img"
     accessibility_ridicat_contrast_xpath_button = "//span[@class='high_contrast_switcher_high']/a"
     accessibility_normal_contrast_xpath_button = "//span[@class='high_contrast_switcher_normal']/a"
-    accessibility_page_style_xpath_button = "//select[@id='edit-pagestyle-select']"
-    accessibility_black_white_page_style_xpath_button = "//select[@id='edit-pagestyle-select']/option[1]"
-    accessibility_white_black_page_style_xpath_button = "//select[@id='edit-pagestyle-select']/option[2]"
-    accessibility_yellow_blue_page_style_xpath_button = "//select[@id='edit-pagestyle-select']/option[3]"
+    accessibility_page_style_xpath_button = "//*[@id='edit-pagestyle-select']"
+    accessibility_black_white_page_style_xpath_button = "//*[@id='edit-pagestyle-select']/option[1]"
+    accessibility_white_black_page_style_xpath_button = "//*[@id='edit-pagestyle-select']/option[2]"
+    accessibility_yellow_blue_page_style_xpath_button = "//*[@id='edit-pagestyle-select']/option[3]"
     accessibility_standard_page_style_xpath_button = "//select[@id='edit-pagestyle-select']/option[4]"
     footer_instagram_xpath_button = "//div[@id='block-block-8']/a[1]"
     footer_facebook_xpath_button = "//div[@id='block-block-8']/a[2]"
@@ -27,6 +28,11 @@ class PageObjects():
     header_invatamant_superior_xpath_button = "//div[@id='tb-megamenu-main-menu']/div/ul/li[3]"
     header_romania_xpath_button = "//div[@id='tb-megamenu-main-menu']/div/ul/li[4]"
     header_cooperare_xpath_button = "//div[@id='tb-megamenu-main-menu']/div/ul/li[5]"
+    header_contact_xpath_text = "//*[@id='tb-megamenu-column-1']/div/ul/li[1]/a"
+    header_invatamant_primar_xpath_text = "//*[@id='tb-megamenu-column-6']/div/ul/li[4]/a"
+    header_studii_universitare_xpath_text = "//*[@id='tb-megamenu-column-8']/div/ul/li[2]/a"
+    header_memorandul_xpath_text = "//*[@id='tb-megamenu-column-10']/div/ul/li[1]/a"
+    header_studiaza_xpath_text = "//*[@id='tb-megamenu-column-11']/div/ul/li[2]/a"
     language_xpath_button = "//span[@class='select2-selection__arrow' and @role='presentation']"
     language_english_xpath_button = "//*[@id='search-language-column']/span/span/span[2]/ul/li[4]"
     language_google_xpath_button = "//span[@id=':1.finishTargetLang']/a/span"
@@ -45,7 +51,7 @@ class PageObjects():
     search_studii_text = "Studii universitare de master"
     search_invatamant_text = "Învățământ primar"
     search_valid_class_text = "   "
-    search_valid_class_text = "///"
+    search_invalid_class_text = "///"
 # location text
     language_comunicate_xpath_text = "//*[@id='block-views-comunicate-de-presa-block-1']/h2"
     search_result_xpath_text = "//*[@id='content']/div/ol/li[1]/h3/a"
@@ -53,3 +59,4 @@ class PageObjects():
     language_xpath_form = "//span[@id='select2-c14v-container']/div"
     search_menu_xpath_form = "//input[@id='edit-search-block-form--2']"
 # messages
+    search_error_message = "Vă rugăm să introduceți câteva cuvinte cheie."

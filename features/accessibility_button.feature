@@ -16,7 +16,7 @@ Feature: Accessibility button functionality on the website https://edu.ro/.
     And I click on the 'Ridicat' button
     Then It should be visible that the contrast of the text on the page ensures easy and clear reading
     When I click on the 'Normal' button
-    Then It should be visible that the text from the page returns to its original state
+    Then It should be visible that the text from the contrast page returns to its original state
 
   Scenario: Check that the user can change the page style
     Given I am on the home page
@@ -32,4 +32,4 @@ Feature: Accessibility button functionality on the website https://edu.ro/.
     Then It should be visible that the text on the page changes color in yellow and the background of the text in blue
     When  I click on the 'Page Style' button
     And I click on the 'Standard' button
-    Then It should be visible that the text from the page returns to its original state
+    Then It should be visible that the text from the page style returns to its original state

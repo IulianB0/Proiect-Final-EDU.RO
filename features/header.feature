@@ -8,7 +8,7 @@ Feature: Header functionality on the website https://edu.ro/.
   Scenario: Check that the user can click on the header buttons and functioning correctly
     Given I am on the home page
     When I hold the mouse over the 'Minister' button
-    Then It should be visible the text 'Date de contact'
+    Then It should be visible the text 'Echipa de conducere'
     When I hold the mouse over the 'Învăţământ preuniversitar' button
     Then It should be visible the text 'Învățământ primar'
     When I hold the mouse over the 'Învățământ superior' button
