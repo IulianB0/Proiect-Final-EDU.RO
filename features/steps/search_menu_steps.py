@@ -13,16 +13,16 @@ def step_impl(context):
 def step_impl(context):
     context.page.first_result_studii()
 
-@when ("I replaces in the search bar 'Studii universitare de master' with the text 'Învățământ primar'")
+@when ("I replaces in the search bar 'Studii universitare de master' with the text 'Invatamant primar'")
 def step_impl(context):
     context.page.clear_form()
     context.page.search_invatamant()
 
-@when ("I press the 'Căutare' button")
+@when ("I press the 'Cautare' button")
 def step_impl(context):
     context.page.search()
 
-@then ("It should be visible and the first result should be identical to text 'Învățământ primar'")
+@then ("It should be visible and the first result should be identical to text 'Invatamant primar'")
 def step_impl(context):
     context.page.first_result_invatamant()
 
@@ -30,7 +30,7 @@ def step_impl(context):
 def step_impl(context):
     context.page.search_valid()
 
-@then ("It should be visible the message 'Căutare'")
+@then ("It should be visible the message 'Cautare'")
 def step_impl(context):
     context.page.search_validation()
 
@@ -39,7 +39,7 @@ def step_impl(context):
     context.page.search_valid_bar()
 
 
-@then ("It should be visible the error message 'Vă rugăm să introduceți câteva cuvinte cheie.'")
+@then ("It should be visible the error message 'Va rugam sa introduceti cateva cuvinte cheie.'")
 def step_impl(context):
     context.page.search_error()
 

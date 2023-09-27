@@ -22,23 +22,23 @@ def step_impl(context):
     context.page.minister_validation()
 
 
-@when ("I hold the mouse over the 'Învăţământ preuniversitar' button")
+@when ("I hold the mouse over the 'Invatamant preuniversitar' button")
 def step_impl(context):
     context.page.hover_invatamant_primar()
 
-@then ("It should be visible the text 'Învățământ primar'")
+@then ("It should be visible the text 'Invatamant primar'")
 def step_impl(context):
     context.page.invatamant_primar_validation()
 
-@when ("I hold the mouse over the 'Învățământ superior' button")
+@when ("I hold the mouse over the 'Invatamant superior' button")
 def step_impl(context):
     context.page.hover_invatamant_superior()
 
-@then ("It should be visible the text 'Studii universitare de licență'")
+@then ("It should be visible the text 'Studii universitare de licenta'")
 def step_impl(context):
     context.page.invatamant_superior_validation()
 
-@when ("I hold the mouse over the 'România educată' button")
+@when ("I hold the mouse over the 'Romania educata' button")
 def step_impl(context):
     context.page.hover_romania()
 
@@ -46,10 +46,10 @@ def step_impl(context):
 def step_impl(context):
     context.page.romania_validation()
 
-@when ("I hold the mouse over the 'Cooperare internațională' button")
+@when ("I hold the mouse over the 'Cooperare internationala' button")
 def step_impl(context):
     context.page.hover_cooperare()
 
-@then ("It should be visible the text 'Studiază în România'")
+@then ("It should be visible the text 'Studiaza in Romania'")
 def step_impl(context):
     context.page.cooperare_validation()

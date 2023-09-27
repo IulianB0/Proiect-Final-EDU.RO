@@ -9,11 +9,11 @@ Feature: Header functionality on the website https://edu.ro/.
     Given I am on the home page
     When I hold the mouse over the 'Minister' button
     Then It should be visible the text 'Date de contact'
-    When I hold the mouse over the 'Învăţământ preuniversitar' button
-    Then It should be visible the text 'Învățământ primar'
-    When I hold the mouse over the 'Învățământ superior' button
-    Then It should be visible the text 'Studii universitare de licență'
-    When I hold the mouse over the 'România educată' button
+    When I hold the mouse over the 'Invatamant preuniversitar' button
+    Then It should be visible the text 'Invatamant primar'
+    When I hold the mouse over the 'Invatamant superior' button
+    Then It should be visible the text 'Studii universitare de licenta'
+    When I hold the mouse over the 'Romania educata' button
     Then It should be visible the text 'Memorandum implementare'
-    When I hold the mouse over the 'Cooperare internațională' button
-    Then It should be visible the text 'Studiază în România'
+    When I hold the mouse over the 'Cooperare internationala' button
+    Then It should be visible the text 'Studiaza in Romania'

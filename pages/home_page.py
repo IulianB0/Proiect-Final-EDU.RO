@@ -7,20 +7,20 @@ from pages.page_objects import PageObjects
 class HomePage(BasePage, PageObjects):
 
     def home_page(self):
-        self.load_url(super().home_url)
+        self.load_url(PageObjects.home_url)
 
     def click_accessibility(self):
-        self.click(super().accessibility_xpath_button)
+        self.click(PageObjects.accessibility_xpath_button)
 
     def click_increase(self):
-        self.click_multiple_times(16, PageObjects.accessibility_increase_size_xpath_button)
+        self.click_multiple_times(16, (PageObjects.accessibility_increase_size_xpath_button))
         time.sleep(2)
 
     def font_increases_validation(self):
         self.assert_font_size(PageObjects.language_comunicate_xpath_text, "30px")
 
     def click_normal_size(self):
-        self.click(super().accessibility_normal_size_xpath_button)
+        self.click((super().accessibility_normal_size_xpath_button))
 
     def font_validation(self):
         self.assert_font_size(PageObjects.language_comunicate_xpath_text, "30px")
@@ -72,29 +72,29 @@ class HomePage(BasePage, PageObjects):
         self.assert_colors(PageObjects.language_comunicate_xpath_text, "rgba(51, 51, 51, 1)", "rgba(0, 0, 0, 0)")
 
     def instagram(self):
-        self.click(PageObjects.footer_instagram_xpath_button)
-        time.sleep(3)
+        self.click_link_and_switch_to_new_window(PageObjects.footer_instagram_xpath_button)
+
 
     def instagram_validation(self):
         self.assert_url(PageObjects.instagram_url)
 
     def facebook(self):
-        self.click(PageObjects.footer_facebook_xpath_button)
-        time.sleep(3)
+        self.click_link_and_switch_to_new_window(PageObjects.footer_facebook_xpath_button)
+
 
     def facebook_validation(self):
         self.assert_url(PageObjects.facebook_url)
 
     def organigrama(self):
         self.click(PageObjects.footer_organigrama_xpath_button)
-        time.sleep(3)
+
 
     def organigrama_validation(self):
         self.assert_url(PageObjects.organigrama_url)
 
     def ordine(self):
-        self.click(PageObjects.footer_oridine_xpath_button)
-        time.sleep(3)
+        self.click_link_and_switch_to_new_window(PageObjects.footer_oridine_xpath_button)
+
 
     def ordine_validation(self):
         self.assert_url(PageObjects.ordine_url)
@@ -187,7 +187,7 @@ class HomePage(BasePage, PageObjects):
         self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_menu_xpath_form)
 
     def search_validation(self):
-        self.assert_text(PageObjects.search_xpath_button, PageObjects.search_cautare_text)
+        self.assert_text(PageObjects.search_cautare_xpath_text, PageObjects.search_cautare_text)
 
     def search_valid_bar(self):
         self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_bar_xpath_form)

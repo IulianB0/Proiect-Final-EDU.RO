@@ -33,7 +33,6 @@ def step_impl(context):
 
 @when ("I click on the 'Ridicat' button")
 def step_impl(context):
-    # raise NotImplementedError("STEP: When I click on the 'Ridicat' button")
     context.page.contrast_ridicat()
 
 @then ("It should be visible that the contrast of the text on the page ensures easy and clear reading")

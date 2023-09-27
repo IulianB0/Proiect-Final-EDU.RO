@@ -9,19 +9,19 @@ def step_impl(context):
 def step_impl(context):
     context.page.language_english()
 
-@then ("It should be visible the 'Engleză' button in Google Translate bar")
+@then ("It should be visible the 'Engleza' button in Google Translate bar")
 def step_impl(context):
     context.page.language_english_validation()
 
-@when ("I click on the 'Engleză' button from the Google Translate bar")
+@when ("I click on the 'Engleza' button from the Google Translate bar")
 def step_impl(context):
     context.page.language_google()
 
-@when ("I click on the 'Bulgară' button from the Google Translate bar")
+@when ("I click on the 'Bulgara' button from the Google Translate bar")
 def step_impl(context):
     context.page.language_bulgara()
 
-@then ("It should be visible the 'Bulgară' button in Google Translate bar")
+@then ("It should be visible the 'Bulgara' button in Google Translate bar")
 def step_impl(context):
     context.page.language_bulgara_validation()
 

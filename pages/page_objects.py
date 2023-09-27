@@ -2,10 +2,10 @@ class PageObjects():
 # links
     home_url = "https://edu.ro/"
     contact_url = "https://edu.ro/contact"
-    instagram_url = "https://www.instagram.com/edu.gov.ro/"
-    facebook_url = "https://www.facebook.com/www.edu.ro/"
-    organigrama_url = "https://www.edu.ro/organigrama"
-    ordine_url = "https://www.edu.ro/legislațe-ordine-de-ministru"
+    instagram_url = "https://instagram.com/edu.gov.ro/"
+    facebook_url = "https://facebook.com/www.edu.ro/"
+    organigrama_url = "https://edu.ro/organigrama"
+    ordine_url = "https://edu.ro/legislațe-ordine-de-ministru"
 # buttons
     accessibility_xpath_button = "//div[@class='help-bttn']"
     accessibility_increase_size_xpath_button = "//div[@id='block-textsize-form']/ul/li[1]/a/img"
@@ -57,6 +57,7 @@ class PageObjects():
 # location text
     language_comunicate_xpath_text = "//*[@id='block-views-comunicate-de-presa-block-1']/h2"
     search_result_xpath_text = "//*[@id='content']/div/ol/li[1]/h3/a"
+    search_cautare_xpath_text = "//*[@id='page-title']"
 # forms
     language_xpath_form = "//span[@id='select2-c14v-container']/div"
     search_menu_xpath_form = "//input[@id='edit-search-block-form--2']"
