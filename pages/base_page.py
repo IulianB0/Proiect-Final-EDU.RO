@@ -1,6 +1,7 @@
 import time
 
-from selenium.webdriver import ActionChains, Keys
+from selenium.common import TimeoutException
+from selenium.webdriver import Keys, ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,16 +14,26 @@ class BasePage(WebDriver):
     def load_url(self, url):
         self.driver.get(url)
 
-    def wait_for_element(self, locator, timeout=10):
-        wait = WebDriverWait(self.driver, timeout)
-        element = wait.until(EC.presence_of_element_located(locator))
-        return element
+    def wait_for_element(self, locator, timeout=4):
+        try:
+            wait = WebDriverWait(self.driver, timeout)
+            element = wait.until(EC.presence_of_element_located(locator))
+            return element
+        except TimeoutException:
+            print(f"The {locator} element was not found in {timeout} seconds.")
+            return None
 
     def click(self, xpath):
         locator = (By.XPATH, xpath)
         element = self.wait_for_element(locator)
         element.click()
         self.driver.implicitly_wait(1)
+
+    def click_google_translate(self, xpath):
+        locator = (By.XPATH, xpath)
+        element = self.wait_for_element(locator)
+        actions = ActionChains(self.driver)
+        actions.click(element).perform()
 
     def click_multiple_times(self, nr, xpath):
         time.sleep(1)
@@ -49,33 +60,18 @@ class BasePage(WebDriver):
         text_font_weight = self.get_text_font_weight(xpath_element)
         assert text_font_weight == expected_weight, f"Font-weight-ul textului este {text_font_weight}, dar se aștepta {expected_weight}"
 
-    def get_element_colors(self, xpath_element):
+    def get_and_assert_colors(self, xpath_element, expected_color, expected_background):
         locator = (By.XPATH, xpath_element)
         element = self.wait_for_element(locator)
-        color = element.value_of_css_property("color")
-        background = element.value_of_css_property("background-color")
-        return color, background
+        actual_color = element.value_of_css_property("color")
+        actual_background = element.value_of_css_property("background-color")
+        assert actual_color == expected_color, f"Text color is {actual_color} but expected {expected_color}"
+        assert actual_background == expected_background, f"Background color is {actual_background}, but expected {expected_background}"
 
-
-    def assert_colors(self, xpath_element, expected_color, expected_background):
-        color, background = self.get_element_colors(xpath_element)
-        assert color == expected_color, f"Text color is {color} but expected {expected_color}"
-        assert background == expected_background, f"Background color is {background}, but expected {expected_background}"
-
-    def get_current_url(self):
+    def get_and_assert_url(self, expected_url):
         time.sleep(1)
         current_url = self.driver.current_url
-        return current_url
-
-    def assert_url(self, expected_url):
-        current_url = self.get_current_url()
         assert current_url == expected_url, f"Current URL '{current_url}' does not match expected URL '{expected_url}'"
-
-    def hover_over(self, xpath):
-        locator = (By.XPATH, xpath)
-        element = self.wait_for_element(locator)
-        actions = ActionChains(self.driver)
-        actions.move_to_element(element).perform()
 
     def assert_text(self, xpath_text, expected_text):
         locator = (By.XPATH, xpath_text)
@@ -86,7 +82,9 @@ class BasePage(WebDriver):
     def fill_text(self, text, text_xpath):
         locator = (By.XPATH, text_xpath)
         element = self.wait_for_element(locator)
-        element.send_keys(text)
+        for char in text:
+            element.send_keys(char)
+        # element.send_keys(text)
 
     def press_enter(self, xpath):
         locator = (By.XPATH, xpath)

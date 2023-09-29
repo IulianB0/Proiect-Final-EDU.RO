@@ -2,11 +2,12 @@ class PageObjects():
 # links
     home_url = "https://edu.ro/"
     contact_url = "https://edu.ro/contact"
-    instagram_url = "https://instagram.com/edu.gov.ro/"
-    facebook_url = "https://facebook.com/www.edu.ro/"
-    organigrama_url = "https://edu.ro/organigrama"
-    ordine_url = "https://edu.ro/legislațe-ordine-de-ministru"
+    harta_url = "https://edu.ro/sitemap"
+    proiecte_url = "https://edu.ro/proiecte-acte-normative"
+    organigrama_url = "https://www.edu.ro/organigrama"
+    ordine_url = "https://www.edu.ro/legisla%C8%9Bie-ordine-de-ministru"
 # buttons
+    popup_xpath_button = "//div[@id='popup-buttons']/button[1]"
     accessibility_xpath_button = "//div[@class='help-bttn']"
     accessibility_increase_size_xpath_button = "//div[@id='block-textsize-form']/ul/li[1]/a/img"
     accessibility_decrease_size_xpath_button = "//div[@id='block-textsize-form']/ul/li[2]/a/img"
@@ -18,8 +19,8 @@ class PageObjects():
     accessibility_white_black_page_style_xpath_button = "//*[@id='edit-pagestyle-select']/option[2]"
     accessibility_yellow_blue_page_style_xpath_button = "//*[@id='edit-pagestyle-select']/option[3]"
     accessibility_standard_page_style_xpath_button = "//select[@id='edit-pagestyle-select']/option[4]"
-    footer_instagram_xpath_button = "//div[@id='block-block-8']/a[1]"
-    footer_facebook_xpath_button = "//div[@id='block-block-8']/a[2]"
+    footer_proiecte_xpath_button = "//*[@id='block-block-6']/ul/li[1]/p/a"
+    footer_harta_xpath_button = "//*[@id='block-block-4']/ul/li[4]/p/a"
     footer_organigrama_xpath_button = "//div[@id='block-block-4']/ul/li[1]/p/a"
     footer_oridine_xpath_button = "//div[@id='block-block-4']/ul/li[2]/p/a"
     header_logo_image_xpath_button = "//*[@id='logo-image']"
@@ -38,7 +39,7 @@ class PageObjects():
     language_google_xpath_button = "//span[@id=':1.finishTargetLang']/a/span"
     language_google_bulgara_xpath_button = "//*[@id=':2.menuBody']/table/tbody/tr/td[3]/a[6]/div/span[2]"
     language_google_close_xpath_button = "//a[@id=':1.close']/img"
-    search_xpath_button = "//*[@id='edit-submit']"
+    search_xpath_button = "//input[@id='edit-submit']"
     search_error_xpath = "//*[@id='main']/div[2]/div/div[1]/h2"
 # text
     header_contact_text = "Date de contact"
@@ -56,11 +57,15 @@ class PageObjects():
     search_cautare_text = "Căutare"
 # location text
     language_comunicate_xpath_text = "//*[@id='block-views-comunicate-de-presa-block-1']/h2"
+    language_noutati_xpath_text = "//*[@id='block-views-noutati-block']/h2"
+    language_legile_xpath_text = "//*[@id='block-menu-menu-diaspora']/ul/li[1]/a"
+    language_proiecte_xpath_text = "//*[@id='block-menu-menu-dezbatere-publica']/ul/li[1]/a"
+
     search_result_xpath_text = "//*[@id='content']/div/ol/li[1]/h3/a"
     search_cautare_xpath_text = "//*[@id='page-title']"
 # forms
     language_xpath_form = "//span[@id='select2-c14v-container']/div"
     search_menu_xpath_form = "//input[@id='edit-search-block-form--2']"
-    search_bar_xpath_form = "//input[@id='edit-key']"
+    search_bar_xpath_form = "//input[@id='edit-keys']"
 # messages
     search_error_message = "Vă rugăm să introduceți câteva cuvinte cheie."
