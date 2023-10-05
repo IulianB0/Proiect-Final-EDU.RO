@@ -13,7 +13,7 @@ def step_impl(context):
 def step_impl(context):
     context.page.first_result_studii()
 
-@when ("I replaces in the search bar 'Studii universitare de master' with the text 'Invatamant primar'")
+@when ("I replaces in the search bar 'Studii universitare de master' with the text 'Bacalaurea'")
 def step_impl(context):
     context.page.clear_form()
     context.page.search_invatamant()
@@ -22,7 +22,7 @@ def step_impl(context):
 def step_impl(context):
     context.page.search()
 
-@then ("It should be visible and the first result should be identical to text 'Invatamant primar'")
+@then ("It should be visible and the first result should be identical to text 'Bacalaureat'")
 def step_impl(context):
     context.page.first_result_invatamant()
 
@@ -43,10 +43,15 @@ def step_impl(context):
 def step_impl(context):
     context.page.search_error()
 
-@when  ("I enter the text '///' in the search menu")
-def step_impl(context):
-    context.page.search_invalid()
 
-@when ("I enter the text '///' in the search bar")
+@given ("I am on the search page")
 def step_impl(context):
-    context.page.search_invalid_bar()
+    context.page.search_page()
+
+@when ("I enter '{special_caracters}' in the search bar")
+def step_impl(context, special_caracters):
+    context.page.search_invalid_bar(special_caracters)
+
+@then ("It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'")
+def step_impl(context):
+    context.page.search_2_error()

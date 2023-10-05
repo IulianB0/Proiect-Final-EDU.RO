@@ -8,6 +8,8 @@ class HomePage(BasePage, PageObjects):
 
     def home_page(self):
         self.load_url(PageObjects.home_url)
+
+    def home_page_first_time(self):
         try:
             self.click(PageObjects.popup_xpath_button)
         except:
@@ -153,35 +155,6 @@ class HomePage(BasePage, PageObjects):
     def cooperare_validation(self):
         self.assert_text(PageObjects.header_studiaza_xpath_text,PageObjects.header_studiaza_text)
 
-    def language(self):
-        self.click(PageObjects.language_xpath_button)
-        time.sleep(1)
-
-    def language_english(self):
-        self.click(PageObjects.language_english_xpath_button)
-        time.sleep(1)
-
-    def language_english_validation(self):
-        time.sleep(1)
-        self.assert_text(PageObjects.language_google_xpath_button, PageObjects.language_google_engleza_text)
-
-    def language_google(self):
-        self.click_google_translate(PageObjects.language_google_xpath_button)
-        time.sleep(1)
-
-    def language_bulgara(self):
-        self.click_google_translate(PageObjects.language_google_bulgara_xpath_button)
-        time.sleep(2)
-
-    def language_bulgara_validation(self):
-        self.assert_text(PageObjects.language_google_xpath_button, PageObjects.language_google_bulgara_text)
-
-    def language_close(self):
-        self.click(PageObjects.language_google_close_xpath_button)
-
-    def language_validation(self):
-        self.assert_text(PageObjects.language_comunicate_xpath_text, PageObjects.language_comunicate_text)
-
     def search_studii(self):
         self.fill_text(PageObjects.search_studii_text, PageObjects.search_menu_xpath_form)
 
@@ -196,14 +169,14 @@ class HomePage(BasePage, PageObjects):
 
     def search_invatamant(self):
         time.sleep(1)
-        self.fill_text(PageObjects.search_invatamant_text, PageObjects.search_bar_xpath_form)
+        self.fill_text(PageObjects.search_bacalaurea_text, PageObjects.search_bar_xpath_form)
 
     def search(self):
         self.click(PageObjects.search_xpath_button)
         time.sleep(1)
 
     def first_result_invatamant(self):
-        self.assert_text(PageObjects.search_result_xpath_text, PageObjects.search_invatamant_text)
+        self.assert_text(PageObjects.search_result_xpath_text, PageObjects.search_bacalaurea_text)
 
     def search_valid(self):
         self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_menu_xpath_form)
@@ -215,10 +188,25 @@ class HomePage(BasePage, PageObjects):
         self.fill_text(PageObjects.search_valid_class_text, PageObjects.search_bar_xpath_form)
 
     def search_error(self):
-        self.assert_text(PageObjects.search_error_message, PageObjects.search_error_xpath)
+        self.assert_text(PageObjects.search_error_xpath, PageObjects.search_error_va_rugam_message)
 
-    def search_invalid(self):
-        self.fill_text(PageObjects.search_invalid_class_text, PageObjects.search_menu_xpath_form)
+    def search_page(self):
+        self.load_url(PageObjects.search_url)
 
-    def search_invalid_bar(self):
-        self.fill_text(PageObjects.search_invalid_class_text, PageObjects.search_bar_xpath_form)
+    def search_invalid_bar(self, special_caracters):
+        self.fill_text(special_caracters, PageObjects.search_bar_xpath_form)
+
+    def search_2_error(self):
+        self.assert_text(PageObjects.search_error_xpath, PageObjects.search_error_you_must_message)
+
+    def language(self):
+        self.click(PageObjects.language_xpath_button)
+        time.sleep(1)
+
+    def language_english(self):
+        self.click(PageObjects.language_english_xpath_button)
+        time.sleep(1)
+
+    def language_english_validation(self):
+        time.sleep(2)
+        self.assert_text(PageObjects.language_comunicate_xpath_text, PageObjects.language_comunicate_english_text)

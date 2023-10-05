@@ -1,8 +1,11 @@
 Feature: Accessibility button functionality on the website https://edu.ro/.
 
-  Scenario: Check that the user can increase or decrease the text size
+  Background:
     Given I am on the home page
-    When I click on the 'Accessibility' button
+
+  Scenario: Check that the user can increase or decrease the text size
+    When I click the popup button
+    And I click on the 'Accessibility' button
     And I click on the '+' button 16 times
     Then It should be visible that the text in the page increases its size
     When I click on the '=' button
@@ -11,7 +14,6 @@ Feature: Accessibility button functionality on the website https://edu.ro/.
     Then It should be visible that the text in the page decreases its size
 
   Scenario: Check that the user can change the contrast of the text
-    Given I am on the home page
     When I click on the 'Accessibility' button
     And I click on the 'Ridicat' button
     Then It should be visible that the contrast of the text on the page ensures easy and clear reading
@@ -19,7 +21,6 @@ Feature: Accessibility button functionality on the website https://edu.ro/.
     Then It should be visible that the text from the contrast page returns to its original state
 
   Scenario: Check that the user can change the page style
-    Given I am on the home page
     When I click on the 'Accessibility' button
     And I click on the 'Page Style' button
     And I click on the 'Black/White' button

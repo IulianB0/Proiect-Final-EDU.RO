@@ -2,427 +2,52 @@
 @charset "utf-8"; .passed{}.failed{}.error{}.skipped{}.undefined{}.summary{}.failed_scenarios{}.footer{}body{font-size:0;color:white;margin:0;padding:0}.behave,td,th{font:normal 11px "Lucida Grande",Helvetica,sans-serif;background:white;color:black}.behave #behave-header,td #behave-header,th #behave-header{background:#65c400;color:white;height:8em}.behave #behave-header #expand-collapse p,td #behave-header #expand-collapse p,th #behave-header #expand-collapse p{float:right;margin:0 0 0 10px}.behave .scenario h3,td .scenario h3,th .scenario h3,.background h3{font-size:11px;padding:3px;margin:0;background:#65c400;color:white;font-weight:bold}.background h3{font-size:1.2em;background:#666}.behave h1,td h1,th h1{margin:0 10px 0 10px;padding:10px;font-family:"Lucida Grande",Helvetica,sans-serif;font-size:2em;position:absolute}.behave h4,td h4,th h4{margin-bottom:2px}.behave div.feature,td div.feature,th div.feature{padding:2px;margin:0 10px 5px 10px}.behave div.examples,td div.examples,th div.examples{padding:0 0 0 1em}.behave .stats,td .stats,th .stats{margin:2em}.behave .summary ul.features li,td .summary ul.features li,th .summary ul.features li{display:inline}.behave .step_name,td .step_name,th .step_name{float:left}.behave .step_file,td .step_file,th .step_file{text-align:right;color:#999}.behave .step_file a,td .step_file a,th .step_file a{color:#999}.behave .scenario_file,td .scenario_file,th .scenario_file{float:right;color:#999}.behave .step_duration{padding-left:1em}.behave .tag,td .tag,th .tag{font-weight:bold;color:#246ac1}.behave .backtrace,td .backtrace,th .backtrace{margin-top:0;margin-bottom:0;margin-left:1em;color:black}.behave a,td a,th a{color:#be5c00;margin-right:.5em}.behave a:hover,td a:hover,th a:hover{text-decoration:none}.behave a:visited,td a:visited,th a:visited{font-weight:normal}.behave a div.examples,td a div.examples,th a div.examples{margin:5px 0 5px 15px;color:black}.behave .outline table,td .outline table,th .outline table{margin:0 0 5px 10px}.behave table,td table,th table{border-collapse:collapse}.behave table td,td table td,th table td{padding:3px 3px 3px 5px}.behave table td.failed,.behave table td.passed,.behave table td.skipped,.behave table td.pending,.behave table td.undefined,td table td.failed,td table td.passed,td table td.skipped,td table td.pending{padding-left:18px;padding-right:10px}.behave table td.failed,td table td.failed,th table td.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave table td.passed,td table td.passed,th table td.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave table td.skipped,td table td.skipped,th table td.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave table td.pending,td table td.pending,th table td.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.undefined,td table td.undefined,th table td.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave table td.message,td table td.message,th table td.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol,td ol,th ol{list-style:none;margin:0;padding:0}.behave ol li.step,td ol li.step,th ol li.step{padding:3px 3px 3px 18px;margin:5px 0 5px 5px}.behave ol li,td ol li,th ol li{margin:0 0 0 1em;padding:0 0 0 .2em}.behave ol li span.param,td ol li span.param,th ol li span.param{font-weight:bold}.behave ol li.failed,td ol li.failed,th ol li.failed{border-left:5px solid #c20000;border-bottom:1px solid #c20000;background:#fffbd3;color:#c20000}.behave ol li.passed,td ol li.passed,th ol li.passed{border-left:5px solid #65c400;border-bottom:1px solid #65c400;background:#dbffb4;color:#3d7700}.behave ol li.skipped,td ol li.skipped,th ol li.skipped{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011}.behave ol li.pending,td ol li.pending,th ol li.pending{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.undefined,td ol li.undefined,th ol li.undefined{border-left:5px solid #faf834;border-bottom:1px solid #faf834;background:#fcfb98;color:#131313}.behave ol li.message,td ol li.message,th ol li.message{border-left:5px solid aqua;border-bottom:1px solid aqua;background:#e0ffff;color:#011;margin-left:10px}.behave #summary,td #summary,th #summary{margin:0;padding:5px 10px;text-align:right;top:0;right:0;float:right}.behave #summary p,td #summary p,th #summary p{margin:0 0 0 2px}.behave #summary #totals,td #summary #totals,th #summary #totals{font-size:1.2em}.behave .scenario h3.failed,td .scenario h3.failed,th .scenario h3.failed,.background h3.failed{background:#c20000}.behave #behave-header.failed,td #behave-header.failed,th #behave-header.failed{background:#c20000}.behave .scenario h3.undefined,td .scenario h3.undefined,th .scenario h3.undefined,.background h3.undefined{background:#faf834;color:black}.behave #behave-header.undefined,td #behave-header.undefined,th #behave-header.undefined{background:#faf834;color:black}#behave-header.failed a{color:white}pre{white-space:pre-wrap}
 --></style><script type="text/javascript"><!--
 function Collapsible_toggle(id){var elem=document.getElementById(id);elem.style.display=(elem.style.display=='none'?'block':'none');return false;};function Collapsible_expandAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='block';}};function Collapsible_collapseAll(className){var elems=document.getElementsByClassName(className);for(var i=0;i<elems.length;i++){elems[i].style.display='none';}};function Collapsible_expandAllFailed(){var elems=document.getElementsByClassName('failed');for(var i=0;i<elems.length;i++){var elem=elems[i];if(elem.nodeName=='H3'){elem.parentElement.getElementsByTagName('ol')[0].style.display='block';}}}
---></script></head><body><div class="behave"><div id="behave-header" class="failed"><div id="label"><h1>Behave Test Report</h1></div><div id="summary"><p id="totals"><p id="feature_totals">Features: failed: 5</p><p id="scenario_totals">Scenarios: failed: 10</p><p id="step_totals">Steps: passed: 2, failed: 10, skipped: 72</p></p><p id="duration">Finished in 5.7 seconds</p><div id="expand-collapse"><a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a><span> | </span><a id="collapser" href="#" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a><span> | </span><a id="failed_expander" href="#" onclick="Collapsible_expandAllFailed()">Expand All Failed</a></div></div></div><div class="feature"><h2><span class="val">Feature: Accessibility button functionality on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:3</span><h3 onclick="Collapsible_toggle('scenario_0')" class="failed"><span class="val">Scenario: Check that the user can increase or decrease the text size</span></h3><ol class="scenario_steps" id="scenario_0"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(1.615s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Accessibility' button</span><small class="step_duration">(2.049s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:8</span></div><span class="embed" /></li><li class="step failed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the '+' button 16 times</span><small class="step_duration">(2.005s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:12</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_1')">Error Message</a><pre id="embed_1" style="display: none">Traceback (most recent call last):
+--></script></head><body><div class="behave"><div id="behave-header" class="failed"><div id="label"><h1>Behave Test Report</h1></div><div id="summary"><p id="totals"><p id="feature_totals">Features: failed: 2, passed: 3</p><p id="scenario_totals">Scenarios: passed: 6, failed: 4</p><p id="step_totals">Steps: passed: 55, failed: 3, skipped: 8, untested: 4</p></p><p id="duration">Finished in 98.4 seconds</p><div id="expand-collapse"><a id="expander" href="#" onclick="Collapsible_expandAll('scenario_steps')">Expand All</a><span> | </span><a id="collapser" href="#" onclick="Collapsible_collapseAll('scenario_steps')">Collapse All</a><span> | </span><a id="failed_expander" href="#" onclick="Collapsible_expandAllFailed()">Expand All Failed</a></div></div></div><div class="feature"><h2><span class="val">Feature: Accessibility button functionality on the website https://edu.ro/.</span></h2><span /></div><div class="background"><h3><span class="val">Background: </span></h3><ol /><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:6</span><h3 onclick="Collapsible_toggle('scenario_0')"><span class="val">Scenario: Check that the user can increase or decrease the text size</span></h3><ol class="scenario_steps" id="scenario_0"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(2.149s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click the popup button</span><small class="step_duration">(0.058s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:8</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'Accessibility' button</span><small class="step_duration">(2.045s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:12</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the '+' button 16 times</span><small class="step_duration">(2.680s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:16</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the text in the page increases its size</span><small class="step_duration">(0.027s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:20</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the '=' button</span><small class="step_duration">(0.050s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:24</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the text from the page returns to its original state</span><small class="step_duration">(0.015s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:27</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the '-' button 8 times</span><small class="step_duration">(4.550s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:30</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the text in the page decreases its size</span><small class="step_duration">(0.021s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:34</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:16</span><h3 onclick="Collapsible_toggle('scenario_1')" class="failed"><span class="val">Scenario: Check that the user can change the contrast of the text</span></h3><ol class="scenario_steps" id="scenario_1"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(1.190s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Accessibility' button</span><small class="step_duration">(2.050s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:12</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'Ridicat' button</span><small class="step_duration">(0.491s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:38</span></div><span class="embed" /></li><li class="step failed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the contrast of the text on the page ensures easy and clear reading</span><small class="step_duration">(4.582s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:42</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_1')">Error Message</a><pre id="embed_1" style="display: none">Traceback (most recent call last):
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
     match.run(runner.context)
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
     self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 14, in step_impl
-    context.page.click_increase()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 22, in click_increase
-    self.click_multiple_times(16, (PageObjects.accessibility_increase_size_xpath_button))
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 41, in click_multiple_times
-    self.click(xpath)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 28, in click
-    element = self.wait_for_element(locator)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 20, in wait_for_element
-    element = wait.until(EC.presence_of_element_located(locator))
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\support\wait.py", line 86, in until
-    value = method(self._driver)
-            ^^^^^^^^^^^^^^^^^^^^
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 82, in _predicate
-    return driver.find_element(*locator)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 739, in find_element
-    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
+  File "features\steps\accessibility_button_steps.py", line 44, in step_impl
+    context.page.contrast_ridicat_validation()
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 46, in contrast_ridicat_validation
+    self.assert_text_font_weight(PageObjects.language_comunicate_xpath_text, 300)
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 60, in assert_text_font_weight
+    text_font_weight = self.get_text_font_weight(xpath_element)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 56, in get_text_font_weight
+    font_weight = element.value_of_css_property("font-weight")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'value_of_css_property'
 
-</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:13</span><h3 onclick="Collapsible_toggle('scenario_1')" class="failed"><span class="val">Scenario: Check that the user can change the contrast of the text</span></h3><ol class="scenario_steps" id="scenario_1"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_2')">Error Message</a><pre id="embed_2" style="display: none">Traceback (most recent call last):
+Captured stdout:
+The ('xpath', "//*[@id='block-views-comunicate-de-presa-block-1']/h2") element was not found in 4 seconds.</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:23</span><h3 onclick="Collapsible_toggle('scenario_2')" class="failed"><span class="val">Scenario: Check that the user can change the page style</span></h3><ol class="scenario_steps" id="scenario_2"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.868s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Accessibility' button</span><small class="step_duration">(2.063s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:12</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'Page Style' button</span><small class="step_duration">(2.069s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:54</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'Black/White' button</span><small class="step_duration">(2.065s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:58</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the text on the page changes color in black and the background of the text in white</span><small class="step_duration">(1.028s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:62</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Page Style' button</span><small class="step_duration">(2.060s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:54</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'White/Black' button</span><small class="step_duration">(2.069s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:66</span></div><span class="embed" /></li><li class="step failed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible that the text on the page changes color in white and the background of the text in black</span><small class="step_duration">(1.024s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:70</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_2')">Error Message</a><pre id="embed_2" style="display: none">Assertion Failed: Text color is rgba(255, 255, 255, 1) but expected rgba(0, 0, 0, 1)</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: Footer functionality on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/footer.feature:3</span><h3 onclick="Collapsible_toggle('scenario_3')"><span class="val">Scenario: Check that the user can click on the footer buttons and functioning correctly</span></h3><ol class="scenario_steps" id="scenario_3"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(1.474s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Organigrama' button</span><small class="step_duration">(2.657s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should redirect in the same browser with the link address 'https://edu.ro/organigrama'</span><small class="step_duration">(1.007s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:8</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.852s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Harta site-ului' button</span><small class="step_duration">(0.605s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:12</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should redirect in the same browser with the link address 'https://edu.ro/sitemap'</span><small class="step_duration">(1.005s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:16</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.797s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Proiecte acte normative' button</span><small class="step_duration">(0.612s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:20</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should redirect in the same browser with the link address 'https://edu.ro/proiecte-acte-normative'</span><small class="step_duration">(1.005s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:24</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.789s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Ordine de ministru' button</span><small class="step_duration">(2.154s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:28</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should redirect to a new browser with the link address 'https://edu.ro/legislate-ordine-de-ministru'</span><small class="step_duration">(1.023s)</small></div><div class="step_file"><span>features/steps/footer_steps.py:32</span></div><span class="embed" /></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: Header functionality on the website https://edu.ro/.</span></h2><span /></div><div class="background"><h3><span class="val">Background: </span></h3><ol /><span /></div><div class="scenario"><span class="scenario_file">features/header.feature:6</span><h3 onclick="Collapsible_toggle('scenario_4')"><span class="val">Scenario: Check if user is redirected to home page by 'logo'</span></h3><ol class="scenario_steps" id="scenario_4"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.861s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'Logo' image</span><small class="step_duration">(0.828s)</small></div><div class="step_file"><span>features/steps/header_steps.py:8</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be redirected to the home page</span><small class="step_duration">(1.008s)</small></div><div class="step_file"><span>features/steps/header_steps.py:12</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/header.feature:10</span><h3 onclick="Collapsible_toggle('scenario_5')"><span class="val">Scenario: Check that the user can click on the header buttons and functioning correctly</span></h3><ol class="scenario_steps" id="scenario_5"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.762s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I hold the mouse over the 'Minister' button</span><small class="step_duration">(2.050s)</small></div><div class="step_file"><span>features/steps/header_steps.py:16</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the text 'Date de contact'</span><small class="step_duration">(0.026s)</small></div><div class="step_file"><span>features/steps/header_steps.py:20</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I hold the mouse over the 'Invatamant preuniversitar' button</span><small class="step_duration">(2.045s)</small></div><div class="step_file"><span>features/steps/header_steps.py:25</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the text 'Invatamant primar'</span><small class="step_duration">(0.024s)</small></div><div class="step_file"><span>features/steps/header_steps.py:29</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I hold the mouse over the 'Invatamant superior' button</span><small class="step_duration">(2.051s)</small></div><div class="step_file"><span>features/steps/header_steps.py:33</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the text 'Studii universitare de licenta'</span><small class="step_duration">(0.024s)</small></div><div class="step_file"><span>features/steps/header_steps.py:37</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I hold the mouse over the 'Romania educata' button</span><small class="step_duration">(2.051s)</small></div><div class="step_file"><span>features/steps/header_steps.py:41</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the text 'Memorandum implementare'</span><small class="step_duration">(0.020s)</small></div><div class="step_file"><span>features/steps/header_steps.py:45</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I hold the mouse over the 'Cooperare internationala' button</span><small class="step_duration">(2.043s)</small></div><div class="step_file"><span>features/steps/header_steps.py:49</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the text 'Studiaza in Romania'</span><small class="step_duration">(0.022s)</small></div><div class="step_file"><span>features/steps/header_steps.py:53</span></div><span class="embed" /></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: The search menu on the website https://edu.ro/.</span></h2><span /></div><div class="background"><h3><span class="val">Background: </span></h3><ol /><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:6</span><h3 onclick="Collapsible_toggle('scenario_6')" class="failed"><span class="val">Scenario: Check that the user can search keywords in the search menu</span></h3><ol class="scenario_steps" id="scenario_6"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.830s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I enter the text 'Studii universitare de master' in the search menu</span><small class="step_duration">(0.704s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'ENTER' button on the keyboard</span><small class="step_duration">(1.121s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:8</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible and the first result should be identical to text 'Studii universitare de master'</span><small class="step_duration">(0.033s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:12</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I replaces in the search bar 'Studii universitare de master' with the text 'Bacalaurea'</span><small class="step_duration">(1.235s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:16</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.256s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step failed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible and the first result should be identical to text 'Bacalaureat'</span><small class="step_duration">(4.537s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:25</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_3')">Error Message</a><pre id="embed_3" style="display: none">Traceback (most recent call last):
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
     match.run(runner.context)
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
     self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
+  File "features\steps\search_menu_steps.py", line 27, in step_impl
+    context.page.first_result_invatamant()
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 179, in first_result_invatamant
+    self.assert_text(PageObjects.search_result_xpath_text, PageObjects.search_bacalaurea_text)
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 79, in assert_text
+    actual_text = element.text
+                  ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
 
-</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/accessibility_button.feature:21</span><h3 onclick="Collapsible_toggle('scenario_2')" class="failed"><span class="val">Scenario: Check that the user can change the page style</span></h3><ol class="scenario_steps" id="scenario_2"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.001s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_3')">Error Message</a><pre id="embed_3" style="display: none">Traceback (most recent call last):
+Captured stdout:
+The ('xpath', "//*[@id='content']/div/ol/li[1]/h3/a") element was not found in 4 seconds.</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:14</span><h3 onclick="Collapsible_toggle('scenario_7')"><span class="val">Scenario: Check that user can search using special characters from the valid class</span></h3><ol class="scenario_steps" id="scenario_7"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.924s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I enter the text '   '(3 blank spaces) in the search menu</span><small class="step_duration">(0.121s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:29</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'ENTER' button on the keyboard</span><small class="step_duration">(0.343s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:8</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the message 'Cautare'</span><small class="step_duration">(0.575s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:33</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I enter the text '   '(3 blank spaces) in the search bar</span><small class="step_duration">(0.088s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:37</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.636s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'Va rugam sa introduceti cateva cuvinte cheie.'</span><small class="step_duration">(0.017s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:42</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:29</span><h3 onclick="Collapsible_toggle('scenario_8')"><span class="val">Scenario Outline: Check that user can search using multiple combinations of special characters from the invalid class -- @1.1 </span></h3><ol class="scenario_steps" id="scenario_8"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.807s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the search page</span><small class="step_duration">(0.670s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:47</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>I enter '</span><b>---</b><span>' in the search bar</span></span><small class="step_duration">(0.082s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:51</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.640s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'</span><small class="step_duration">(0.016s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:55</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:30</span><h3 onclick="Collapsible_toggle('scenario_9')"><span class="val">Scenario Outline: Check that user can search using multiple combinations of special characters from the invalid class -- @1.2 </span></h3><ol class="scenario_steps" id="scenario_9"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.850s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the search page</span><small class="step_duration">(0.617s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:47</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>I enter '</span><b>+++</b><span>' in the search bar</span></span><small class="step_duration">(0.093s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:51</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.340s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'</span><small class="step_duration">(0.016s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:55</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:31</span><h3 onclick="Collapsible_toggle('scenario_10')"><span class="val">Scenario Outline: Check that user can search using multiple combinations of special characters from the invalid class -- @1.3 </span></h3><ol class="scenario_steps" id="scenario_10"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.838s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the search page</span><small class="step_duration">(0.620s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:47</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>I enter '</span><b>***</b><span>' in the search bar</span></span><small class="step_duration">(0.091s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:51</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.262s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'</span><small class="step_duration">(0.015s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:55</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:32</span><h3 onclick="Collapsible_toggle('scenario_11')"><span class="val">Scenario Outline: Check that user can search using multiple combinations of special characters from the invalid class -- @1.4 </span></h3><ol class="scenario_steps" id="scenario_11"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.813s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the search page</span><small class="step_duration">(0.653s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:47</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>I enter '</span><b>___</b><span>' in the search bar</span></span><small class="step_duration">(0.090s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:51</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.264s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'</span><small class="step_duration">(0.016s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:55</span></div><span class="embed" /></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:33</span><h3 onclick="Collapsible_toggle('scenario_12')" class="failed"><span class="val">Scenario Outline: Check that user can search using multiple combinations of special characters from the invalid class -- @1.5 </span></h3><ol class="scenario_steps" id="scenario_12"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.837s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the search page</span><small class="step_duration">(0.609s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:47</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val"><span>I enter '</span><b>...</b><span>' in the search bar</span></span><small class="step_duration">(0.094s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:51</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I press the 'Cautare' button</span><small class="step_duration">(1.136s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:21</span></div><span class="embed" /></li><li class="step failed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the error message 'You must include at least one positive keyword with 3 characters or more.'</span><small class="step_duration">(4.627s)</small></div><div class="step_file"><span>features/steps/search_menu_steps.py:55</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_4')">Error Message</a><pre id="embed_4" style="display: none">Traceback (most recent call last):
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
     match.run(runner.context)
   File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
     self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
+  File "features\steps\search_menu_steps.py", line 57, in step_impl
+    context.page.search_2_error()
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 200, in search_2_error
+    self.assert_text(PageObjects.search_error_xpath, PageObjects.search_error_you_must_message)
+  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 79, in assert_text
+    actual_text = element.text
+                  ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
 
-</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: Footer functionality on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/footer.feature:3</span><h3 onclick="Collapsible_toggle('scenario_3')" class="failed"><span class="val">Scenario: Check that the user can click on the footer buttons and functioning correctly</span></h3><ol class="scenario_steps" id="scenario_3"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_4')">Error Message</a><pre id="embed_4" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: Header functionality on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/header.feature:3</span><h3 onclick="Collapsible_toggle('scenario_4')" class="failed"><span class="val">Scenario: Check if user is redirected to home page by 'logo'</span></h3><ol class="scenario_steps" id="scenario_4"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the contact page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/header_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_5')">Error Message</a><pre id="embed_5" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\header_steps.py", line 6, in step_impl
-    context.page.contact_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 113, in contact_page
-    self.load_url(PageObjects.contact_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/header.feature:8</span><h3 onclick="Collapsible_toggle('scenario_5')" class="failed"><span class="val">Scenario: Check that the user can click on the header buttons and functioning correctly</span></h3><ol class="scenario_steps" id="scenario_5"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_6')">Error Message</a><pre id="embed_6" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: The language selector on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/language_selector.feature:3</span><h3 onclick="Collapsible_toggle('scenario_6')" class="failed"><span class="val">Scenario: Check that the user can choose another language in the language selector</span></h3><ol class="scenario_steps" id="scenario_6"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.003s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_7')">Error Message</a><pre id="embed_7" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: The search menu on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:3</span><h3 onclick="Collapsible_toggle('scenario_7')" class="failed"><span class="val">Scenario: Check that the user can search keywords in the search menu</span></h3><ol class="scenario_steps" id="scenario_7"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_8')">Error Message</a><pre id="embed_8" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:12</span><h3 onclick="Collapsible_toggle('scenario_8')" class="failed"><span class="val">Scenario: Check that user can search using special characters from the valid class</span></h3><ol class="scenario_steps" id="scenario_8"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.001s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_9')">Error Message</a><pre id="embed_9" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div><div class="scenario"><span class="scenario_file">features/search_menu.feature:21</span><h3 onclick="Collapsible_toggle('scenario_9')" class="failed"><span class="val">Scenario: Check that user can search using special characters from the invalid class</span></h3><ol class="scenario_steps" id="scenario_9"><li class="step failed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.002s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed"><a onclick="Collapsible_toggle('embed_10')">Error Message</a><pre id="embed_10" style="display: none">Traceback (most recent call last):
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\model.py", line 1329, in run
-    match.run(runner.context)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\behave\matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features\steps\accessibility_button_steps.py", line 6, in step_impl
-    context.page.home_page()
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\home_page.py", line 10, in home_page
-    self.load_url(PageObjects.home_url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\pages\base_page.py", line 15, in load_url
-    self.driver.get(url)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in get
-    self.execute(Command.GET, {"url": url})
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
-    self.error_handler.check_response(response)
-  File "D:\1. IT Factory\4. PyCharm Projects\ProiectFinalEDU.RO\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=117.0.5938.132)
-Stacktrace:
-	GetHandleVerifier [0x00007FF771667892+54818]
-	(No symbol) [0x00007FF7715D6AC2]
-	(No symbol) [0x00007FF77148DA3B]
-	(No symbol) [0x00007FF77146DEE8]
-	(No symbol) [0x00007FF7714F3237]
-	(No symbol) [0x00007FF771506C6F]
-	(No symbol) [0x00007FF7714EE883]
-	(No symbol) [0x00007FF7714C3691]
-	(No symbol) [0x00007FF7714C48D4]
-	GetHandleVerifier [0x00007FF7719CB992+3610402]
-	GetHandleVerifier [0x00007FF771A21860+3962352]
-	GetHandleVerifier [0x00007FF771A19D4F+3930847]
-	GetHandleVerifier [0x00007FF771703646+693206]
-	(No symbol) [0x00007FF7715E1628]
-	(No symbol) [0x00007FF7715DD934]
-	(No symbol) [0x00007FF7715DDA62]
-	(No symbol) [0x00007FF7715CE113]
-	BaseThreadInitThunk [0x00007FF8ABF1257D+29]
-	RtlUserThreadStart [0x00007FF8AE1CAA68+40]
-
-</pre>    </span></li></ol><span /></div></div></body></html>
+Captured stdout:
+The ('xpath', "//*[@id='main']/div[2]/div/div[1]") element was not found in 4 seconds.</pre>    </span></li></ol><span /></div><div class="feature"><h2><span class="val">Feature: The language selector on the website https://edu.ro/.</span></h2><span /></div><div class="scenario"><span class="scenario_file">features/select_another_language.feature:3</span><h3 onclick="Collapsible_toggle('scenario_13')"><span class="val">Scenario: Check that the user can choose another language in the language selector</span></h3><ol class="scenario_steps" id="scenario_13"><li class="step passed"><div class="step_name"><span class="keyword">Given </span><span class="step val">I am on the home page</span><small class="step_duration">(0.807s)</small></div><div class="step_file"><span>features/steps/accessibility_button_steps.py:4</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">When </span><span class="step val">I click on the 'language selector' button</span><small class="step_duration">(1.060s)</small></div><div class="step_file"><span>features/steps/select_another_language_steps.py:6</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">And </span><span class="step val">I click on the 'English' button</span><small class="step_duration">(1.064s)</small></div><div class="step_file"><span>features/steps/select_another_language_steps.py:10</span></div><span class="embed" /></li><li class="step passed"><div class="step_name"><span class="keyword">Then </span><span class="step val">It should be visible the 'Engleza' button in Google Translate bar</span><small class="step_duration">(2.024s)</small></div><div class="step_file"><span>features/steps/select_another_language_steps.py:14</span></div><span class="embed" /></li></ol><span /></div></div></body></html>

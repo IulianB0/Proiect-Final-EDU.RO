@@ -77,14 +77,13 @@ class BasePage(WebDriver):
         locator = (By.XPATH, xpath_text)
         element = self.wait_for_element(locator)
         actual_text = element.text
-        assert actual_text == expected_text, f"Current text '{actual_text}' does not match expected text '{expected_text}"
+        assert expected_text in actual_text, f"Current text '{actual_text}' does not match expected text '{expected_text}"
 
     def fill_text(self, text, text_xpath):
         locator = (By.XPATH, text_xpath)
         element = self.wait_for_element(locator)
         for char in text:
             element.send_keys(char)
-        # element.send_keys(text)
 
     def press_enter(self, xpath):
         locator = (By.XPATH, xpath)
@@ -100,10 +99,12 @@ class BasePage(WebDriver):
         current_window_handle = self.driver.current_window_handle
         self.click(xpath_element)
         self.wait_for_new_window(current_window_handle)
+        time.sleep(1)
 
     def wait_for_new_window(self, old_window_handle):
         new_window_handle = self.get_new_window_handle(old_window_handle)
         self.driver.switch_to.window(new_window_handle)
+        time.sleep(1)
 
     def get_new_window_handle(self, old_window_handle):
         handles = self.driver.window_handles

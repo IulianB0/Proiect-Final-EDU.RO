@@ -5,6 +5,10 @@ from behave import given, when, then
 def step_impl(context):
     context.page.home_page()
 
+@when ("I click the popup button")
+def step_imp(context):
+    context.page.home_page_first_time()
+
 @when ("I click on the 'Accessibility' button")
 def step_impl(context):
     context.page.click_accessibility()
